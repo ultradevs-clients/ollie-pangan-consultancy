@@ -1,0 +1,7 @@
+.footer {
+	.link-container {
+		li {
+			@apply hover:text-background duration-200;
+		}
+	}
+}

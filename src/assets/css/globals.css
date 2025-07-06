@@ -3,6 +3,8 @@
 
 @import "./base/common.css";
 @import "./navbar/navbar.css";
+@import "./about/about.css";
+@import "./footer/footer.css";
 
 /* 
 @custom-variant dark (&:is(.dark *));

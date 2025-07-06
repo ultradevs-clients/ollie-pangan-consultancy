@@ -1,0 +1,154 @@
+"use client";
+import Logo from "@/assets/images/logo-footer.png";
+import Image from "next/image";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { FiPhoneCall } from "react-icons/fi";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { Input } from "../ui/input";
+
+export default function Footer() {
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors },
+	} = useForm();
+
+	const onSubmit = (data) => {
+		console.log("Form submitted:", data);
+	};
+	return (
+		<div className="bg-footer pt-20 footer">
+			<div className="container flex text-background/70 pb-14">
+				<div className="w-2/4">
+					<Image
+						src={Logo}
+						alt="Footer Logo"
+						className="w-48 object-cover"
+					/>
+					<p className="!py-8">
+						Turning bold ideas into functional design.
+					</p>
+					<h5 className="text-lg font-medium text-background">
+						Social Links
+					</h5>
+					<ul className="flex items-center gap-3 pt-3">
+						<li>
+							<a
+								href="https://imranx.netlify.app/"
+								target="_blank"
+								className="text-xl"
+							>
+								<FaFacebook />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://imranx.netlify.app/"
+								target="_blank"
+								className="text-xl"
+							>
+								<FaXTwitter />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://imranx.netlify.app/"
+								target="_blank"
+								className="text-xl"
+							>
+								<FaInstagram />
+							</a>
+						</li>
+						<li>
+							<a
+								href="https://imranx.netlify.app/"
+								target="_blank"
+								className="text-xl"
+							>
+								<FaLinkedin />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="w-2/4 flex justify-between gap-5">
+					<ul className="space-y-3 text-lg link-container">
+						<h4 className="text-background font-medium">
+							Quick Links
+						</h4>
+						<li>
+							<Link href={"/"}>Home</Link>
+						</li>
+						<li>
+							<Link href={"/about"}>About</Link>
+						</li>
+						<li>
+							<Link href={"/portfolio"}>Portfolio</Link>
+						</li>
+						<li>
+							<Link href={"/blog"}>Blog</Link>
+						</li>
+						<li>
+							<Link href={"/contact"}>Contact</Link>
+						</li>
+					</ul>
+
+					<ul className="w-3/5 space-y-4">
+						<h4 className="text-background text-lg font-medium">
+							Contact Info
+						</h4>
+						<li className="flex items-center gap-2 text-lg">
+							<div className="bg-background/10 p-2 rounded-lg">
+								<FiMail />
+							</div>
+							ollie@example.com
+						</li>
+						<li className="flex items-center gap-2 text-lg">
+							<div className="bg-background/10 p-2 rounded-lg">
+								<FiPhoneCall />
+							</div>
+							Support: (+21) 547 885 6885
+						</li>
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<div className="flex items-center mt-7 pr-[3px] border border-background/20 bg-background/10 rounded-2xl justify-between">
+								<input
+									type="email"
+									placeholder="Email"
+									{...register("email", {
+										required: "Email is required",
+										pattern: {
+											value: /^\S+@\S+$/i,
+											message: "Invalid email address",
+										},
+									})}
+									className="border-none rounded-xl placeholder:text-background/70 focus:outline-none py-4 text-base w-full px-4 shadow-none"
+								/>
+								<button className="btn !bg-background !text-accent">
+									Subscribe
+								</button>
+							</div>
+							{errors.email && (
+								<p className="text-red-500 !text-sm -mt-1 !pb-0">
+									{errors.email.message}
+								</p>
+							)}
+						</form>
+					</ul>
+				</div>
+			</div>
+			<div className="container flex items-center justify-between text-background/70 border-t border-background/15 pt-6 pb-8">
+				<h5>Copyright 2024 © Lodistics Pvt. Ltd.</h5>
+				<div className="flex gap-2">
+					<a href="#">Terms & Condition</a>
+					<span>|</span>
+					<a href="#">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	);
+}

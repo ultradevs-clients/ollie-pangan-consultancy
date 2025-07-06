@@ -1,18 +1,3 @@
 .navbar {
-  @apply bg-secondary py-4;
-  .active {
-    @apply relative;
-    &::before {
-      content: "";
-      background-image: url("../../images/minus.png");
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 10px;
-      display: inline-block;
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-    }
-  }
+	@apply bg-secondary py-4;
 }
