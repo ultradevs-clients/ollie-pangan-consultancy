@@ -35,7 +35,13 @@ export default function Navbar() {
 			} `}
 		>
 			<div className="container flex items-center justify-between">
-				<Image src={Logo} alt="Logo" className="w-48 object-cover" />
+				<Link href={"/"}>
+					<Image
+						src={Logo}
+						alt="Logo"
+						className="w-48 object-cover"
+					/>
+				</Link>
 
 				<ul className="flex items-center gap-5">
 					<li>

@@ -10,11 +10,11 @@ import LeftSVG from "@/assets/images/about-banner-left.png";
 import RightSVG from "@/assets/images/about-banner-right.png";
 import Image from "next/image";
 
-export default function AboutHeader() {
+export default function PageBanner({ title, currentPage }) {
 	return (
 		<div className="container">
 			<div className="bg-main my-[60px] py-10 px-9 relative text-background text-center rounded-4xl">
-				<h2 className="pb-4">About Me</h2>
+				<h2 className="pb-4">{title}</h2>
 				<Breadcrumb className="w-max mx-auto">
 					<BreadcrumbList>
 						<BreadcrumbItem>
@@ -25,7 +25,7 @@ export default function AboutHeader() {
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
 							<BreadcrumbLink asChild>
-								<Link href="/about">About Me</Link>
+								<Link href="/about">{currentPage}</Link>
 							</BreadcrumbLink>
 						</BreadcrumbItem>
 					</BreadcrumbList>

@@ -18,7 +18,7 @@ export default function ContactForm() {
 		console.log("Form submitted:", data);
 	};
 	return (
-		<div className="container py-20 flex">
+		<div className="container py-20 flex items-center">
 			<div className="w-2/4">
 				<h2>Contact me</h2>
 				<p className="text-low w-9/12">
