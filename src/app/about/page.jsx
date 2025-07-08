@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function page() {
 	return (
-		<div className="about">
+		<div className="about ">
 			<PageBanner title={"About Me"} currentPage={"About me"} />
 			<Services />
 			<ContactForm />

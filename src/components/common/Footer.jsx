@@ -23,15 +23,15 @@ export default function Footer() {
 		console.log("Form submitted:", data);
 	};
 	return (
-		<div className="bg-footer pt-20 footer">
-			<div className="container flex text-background/70 pb-14">
-				<div className="w-2/4">
+		<div className="bg-footer pt-12 lg:pt-20 footer lg:px-0 px-5">
+			<div className="container flex lg:flex-row flex-col lg:gap-0 gap-10 text-background/70 pb-8 lg:pb-14">
+				<div className="lg:w-2/4">
 					<Image
 						src={Logo}
 						alt="Footer Logo"
-						className="w-48 object-cover"
+						className="w-36 lg:w-48 object-cover"
 					/>
-					<p className="!py-8">
+					<p className="!py-4 lg:!py-8 lg:!text-lg !text-base">
 						Turning bold ideas into functional design.
 					</p>
 					<h5 className="text-lg font-medium text-background">
@@ -76,8 +76,8 @@ export default function Footer() {
 						</li>
 					</ul>
 				</div>
-				<div className="w-2/4 flex justify-between gap-5">
-					<ul className="space-y-3 text-lg link-container">
+				<div className="lg:w-2/4 flex md:flex-row flex-col justify-between gap-5">
+					<ul className="space-y-2 lg:space-y-3 text-lg link-container">
 						<h4 className="text-background font-medium">
 							Quick Links
 						</h4>
@@ -98,24 +98,24 @@ export default function Footer() {
 						</li>
 					</ul>
 
-					<ul className="w-3/5 space-y-4">
+					<ul className="lg:w-3/5 space-y-2 lg:space-y-4">
 						<h4 className="text-background text-lg font-medium">
 							Contact Info
 						</h4>
-						<li className="flex items-center gap-2 text-lg">
+						<li className="flex items-center gap-2 lg:text-lg">
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiMail />
 							</div>
 							ollie@example.com
 						</li>
-						<li className="flex items-center gap-2 text-lg">
+						<li className="flex items-center gap-2 lg:text-lg">
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiPhoneCall />
 							</div>
 							Support: (+21) 547 885 6885
 						</li>
 						<form onSubmit={handleSubmit(onSubmit)}>
-							<div className="flex items-center mt-7 pr-[3px] border border-background/20 bg-background/10 rounded-2xl justify-between">
+							<div className="flex items-center mt-5 lg:mt-7 lg:pr-[3px] border border-background/20 bg-background/10 rounded-2xl justify-between">
 								<input
 									type="email"
 									placeholder="Email"
@@ -126,9 +126,9 @@ export default function Footer() {
 											message: "Invalid email address",
 										},
 									})}
-									className="border-none rounded-xl placeholder:text-background/70 focus:outline-none py-4 text-base w-full px-4 shadow-none"
+									className="border-none rounded-xl placeholder:text-background/70 focus:outline-none  lg:py-4 text-base w-full px-3 lg:px-4 shadow-none"
 								/>
-								<button className="btn !bg-background !text-accent">
+								<button className="btn !px-4 !w-max lg:!px-6 !py-2 lg:!py-3 !bg-background !text-accent">
 									Subscribe
 								</button>
 							</div>
@@ -141,7 +141,7 @@ export default function Footer() {
 					</ul>
 				</div>
 			</div>
-			<div className="container flex items-center justify-between text-background/70 border-t border-background/15 pt-6 pb-8">
+			<div className="container text-sm lg:text-base flex lg:flex-row flex-col items-center justify-between text-background/70 border-t border-background/15 pt-3 lg:pt-6 pb-4 lg:pb-8">
 				<h5>Copyright 2024 © Lodistics Pvt. Ltd.</h5>
 				<div className="flex gap-2">
 					<a href="#">Terms & Condition</a>

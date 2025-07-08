@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "@/assets/images/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import Sidebar from "./Sidebar";
 
 export default function Navbar() {
 	const [show, setShow] = useState(true);
@@ -30,7 +31,7 @@ export default function Navbar() {
 	}, [lastScrollY]);
 	return (
 		<nav
-			className={`navbar fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
+			className={`navbar flex items-center lg:px-0 px-5 fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
 				show ? "translate-y-0" : "-translate-y-full"
 			} `}
 		>
@@ -39,11 +40,11 @@ export default function Navbar() {
 					<Image
 						src={Logo}
 						alt="Logo"
-						className="w-48 object-cover"
+						className="w-36 lg:w-48 object-cover"
 					/>
 				</Link>
 
-				<ul className="flex items-center gap-5">
+				<ul className="hidden lg:flex items-center gap-5">
 					<li>
 						<Navlink to="/">Home</Navlink>
 					</li>
@@ -58,12 +59,13 @@ export default function Navbar() {
 					</li>
 				</ul>
 
-				<div className="lg:w-48 flex justify-end">
+				<div className="lg:w-48 hidden lg:flex justify-end">
 					<Link href={"/contact"}>
 						<button className="btn">Contact me</button>
 					</Link>
 				</div>
 			</div>
+			<Sidebar />
 		</nav>
 	);
 }
