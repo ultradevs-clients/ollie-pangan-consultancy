@@ -17,7 +17,7 @@ export default function Cards() {
 	};
 
 	return (
-		<div className="container pt-20 grid grid-cols-3 gap-6">
+		<div className="container lg:px-0 px-5 pt-12 md:pt-16 lg:pt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 lg:gap-6">
 			<div className="bg-main/10 rounded-2xl p-6 text-center">
 				<Image
 					src={iconPhone}

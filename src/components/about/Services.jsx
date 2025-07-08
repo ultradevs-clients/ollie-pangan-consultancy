@@ -9,20 +9,20 @@ import Image from "next/image";
 
 export default function Services() {
 	return (
-		<div className="bg-secondary py-20">
-			<div className="container flex gap-6">
-				<div className="w-2/4">
+		<div className="bg-secondary py-12 lg:py-20 lg:px-0 px-5">
+			<div className="container flex md:flex-row flex-col gap-6">
+				<div className="md:w-2/4">
 					<h2>What I'm Here For? </h2>
 					<p>
 						To help people and companies see what's possible-even
 						when they can't see it yet.
 					</p>
-					<div className="bg-main/10 relative rounded-3xl mt-8 overflow-hidden">
-						<div className="p-8">
-							<h4 className="text-2xl font-semibold">
+					<div className="bg-main/10 relative rounded-3xl mt-5 lg:mt-8 overflow-hidden">
+						<div className="p-5 lg:p-8">
+							<h4 className="text-xl lg:text-2xl font-semibold">
 								What I’m Here For?
 							</h4>
-							<h5 className="text-xl font-medium italic py-3">
+							<h5 className="text-lg lg:text-xl font-medium italic py-2 lg:py-3">
 								“To help people and companies see what’s
 								possible—even when they can’t see it yet.”
 							</h5>
@@ -30,28 +30,30 @@ export default function Services() {
 						<Image
 							src={UserImage}
 							alt="User Image"
-							className="w-96"
+							className="w-44 lg:w-96"
 						/>
 
-						<div className="absolute bottom-12 right-8 z-10">
-							<div className="rounded-t-2xl  px-7 pt-6 pb-2 bg-background w-max relative card">
-								<h4 className="text-xl font-medium">
+						<div className="absolute bottom-3 lg:bottom-12 right-3 lg:right-8 z-10">
+							<div className="rounded-t-2xl  px-5 lg:px-7 pt-3 lg:pt-6 pb-1 lg:pb-2 bg-background w-max relative card">
+								<h4 className="lg:text-xl text-sm font-medium">
 									Experience
 								</h4>
 							</div>
-							<div className="rounded-b-2xl rounded-tr-2xl px-7 pt-2 pb-6 bg-background ">
-								<h4 className="text-[44px] font-extrabold">
+							<div className="rounded-b-2xl rounded-tr-2xl pr-7 pl-5 lg:px-7 pt-1 lg:pt-2 pb-3 lg:pb-6 bg-background ">
+								<h4 className="text-xl lg:text-[44px] font-extrabold">
 									20+ Years
 								</h4>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="w-2/4">
-					<h4 className="text-3xl font-bold">
+				<div className="md:w-2/4">
+					<h4 className="text-2xl lg:text-3xl font-bold">
 						10 Things You Should Know About Me
 					</h4>
-					<p>(That Aren't on my CV)</p>
+					<p className="!text-base lg:!text-lg">
+						(That Aren't on my CV)
+					</p>
 					<Accordion
 						type="single"
 						collapsible
@@ -64,7 +66,7 @@ export default function Services() {
 								value={value}
 								className="rounded-2xl border border-main/10 bg-background/50 overflow-hidden"
 							>
-								<AccordionTrigger className="data-[state=open]:bg-main data-[state=open]:rounded-none data-[state=open]:text-background px-6 py-5 data-[state=open]:pb-2 text-left text-xl font-bold hover:no-underline cursor-pointer">
+								<AccordionTrigger className="data-[state=open]:bg-main data-[state=open]:rounded-none data-[state=open]:text-background px-6 py-5 data-[state=open]:pb-2 text-left text-base lg:text-xl font-bold hover:no-underline cursor-pointer">
 									{title}
 								</AccordionTrigger>
 								<AccordionContent className="bg-main text-background px-6  pb-5 text-base font-light">

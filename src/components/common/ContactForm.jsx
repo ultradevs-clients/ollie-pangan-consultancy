@@ -18,15 +18,15 @@ export default function ContactForm() {
 		console.log("Form submitted:", data);
 	};
 	return (
-		<div className="container py-20 flex items-center">
-			<div className="w-2/4">
+		<div className="container py-12 lg:py-20 flex lg:flex-row flex-col gap-6 lg:gap-0 items-center lg:px-0 px-5">
+			<div className="lg:w-2/4">
 				<h2>Contact me</h2>
-				<p className="text-low w-9/12">
+				<p className="text-low lg:w-9/12">
 					Got a project, idea, or challenge you'd like to talk
 					through? I’m always open to thoughtful conversations and
 					meaningful collaborations.
 				</p>
-				<ul className="text-low pt-8 space-y-4">
+				<ul className="text-low pt-3 lg:pt-8 space-y-4">
 					<li className="flex items-center gap-2 text-lg">
 						<div className="bg-main/10 p-2 rounded-lg">
 							<FiMail />
@@ -41,20 +41,20 @@ export default function ContactForm() {
 					</li>
 				</ul>
 			</div>
-			<div className="w-2/4 bg-main/15 py-6 px-7 rounded-4xl">
+			<div className="lg:w-2/4 bg-main/15 w-full py-4 md:py-6 px-5 md:px-7 rounded-2xl lg:rounded-4xl">
 				<h4 className="text-2xl font-bold">Let’s get in touch</h4>
 				<form
 					onSubmit={handleSubmit(onSubmit)}
 					className="grid grid-cols-2 gap-x-5 gap-y-3 pt-5"
 				>
-					<div>
+					<div className="col-span-2 md:col-span-1">
 						<Input
 							type="text"
 							placeholder="Name"
 							{...register("name", {
 								required: "Name is required",
 							})}
-							className="border-none bg-background py-7 text-base rounded-xl px-4 shadow-none"
+							className="border-none bg-background py-5 lg:py-7 text-base rounded-xl px-4 shadow-none"
 						/>
 						{errors.name && (
 							<p className="text-red-500 !text-sm -mt-1 !pb-0">
@@ -62,15 +62,15 @@ export default function ContactForm() {
 							</p>
 						)}
 					</div>
-					<div>
+					<div className="col-span-2 md:col-span-1">
 						<Input
 							type="text"
 							placeholder="Company"
 							{...register("company")}
-							className="border-none bg-background py-7 text-base rounded-xl px-4 shadow-none"
+							className="border-none bg-background py-5 lg:py-7 text-base rounded-xl px-4 shadow-none"
 						/>
 					</div>
-					<div>
+					<div className="col-span-2 md:col-span-1">
 						<Input
 							type="email"
 							placeholder="Email"
@@ -81,7 +81,7 @@ export default function ContactForm() {
 									message: "Invalid email address",
 								},
 							})}
-							className="border-none bg-background py-7 text-base rounded-xl px-4 shadow-none"
+							className="border-none bg-background py-5 lg:py-7 text-base rounded-xl px-4 shadow-none"
 						/>
 						{errors.email && (
 							<p className="text-red-500 !text-sm -mt-1 !pb-0">
@@ -90,12 +90,12 @@ export default function ContactForm() {
 						)}
 					</div>
 
-					<div>
+					<div className="col-span-2 md:col-span-1">
 						<Input
 							type="tel"
 							placeholder="Phone number"
 							{...register("phoneNumber")}
-							className="border-none bg-background py-7 text-base rounded-xl px-4 shadow-none"
+							className="border-none bg-background py-5 lg:py-7 text-base rounded-xl px-4 shadow-none"
 						/>
 					</div>
 					<div className="col-span-2">
@@ -108,7 +108,7 @@ export default function ContactForm() {
 										"Message must be at least 10 characters",
 								},
 							})}
-							className="border-none bg-background pt-3 h-28 text-base rounded-xl px-4 shadow-none resize-none"
+							className="border-none bg-background pt-3 h-20 lg:h-28 text-base rounded-xl px-4 shadow-none resize-none"
 							placeholder="Type your message here."
 						/>
 						{errors.message && (
@@ -117,7 +117,7 @@ export default function ContactForm() {
 							</p>
 						)}
 					</div>
-					<div className="pt-2">
+					<div className="lg:pt-2 col-span-2 md:col-span-1">
 						<button className="btn">Send Message</button>
 					</div>
 				</form>

@@ -1,3 +1,5 @@
+import Blogs from "@/components/blog/Blogs";
+import PageBanner from "@/components/common/PageBanner";
 import React from "react";
 
 export const metadata = {
@@ -6,5 +8,10 @@ export const metadata = {
 };
 
 export default function page() {
-	return <div>blog page</div>;
+	return (
+		<div>
+			<PageBanner title={"Blog"} currentPage={"Blog"} />
+			<Blogs />
+		</div>
+	);
 }
