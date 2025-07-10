@@ -1,8 +1,13 @@
+import Banner from "@/components/homepage/Banner";
 import React from "react";
 export const metadata = {
-  title: "Home | Ollie Pangan",
-  description: "Description.",
+	title: "Home | Ollie Pangan",
+	description: "Description.",
 };
 export default function page() {
-  return <div className="container">page</div>;
+	return (
+		<div>
+			<Banner />
+		</div>
+	);
 }

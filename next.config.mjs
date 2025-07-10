@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {  images: {
-    domains: ["i.postimg.cc", "i.ibb.co"],
+    domains: ["i.postimg.cc", "i.ibb.co", "static.vecteezy.com"],
 	remotePatterns: [
       {
         protocol: 'http',

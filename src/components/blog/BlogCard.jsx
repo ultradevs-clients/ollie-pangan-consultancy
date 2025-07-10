@@ -7,7 +7,7 @@ export default function BlogCard({ id, title, description, date, image }) {
 	return (
 		<Link
 			href={`/blog/${id}`}
-			className="p-2 border border-low/20 hover:shadow-md duration-300 rounded-2xl cursor-pointer"
+			className="p-2 border border-low/10 hover:shadow-md duration-300 rounded-2xl cursor-pointer"
 		>
 			<Image
 				src={image ? image : "https://i.ibb.co/fVrSSKFP/fff.webp"}
