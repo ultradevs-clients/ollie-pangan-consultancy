@@ -22,7 +22,7 @@ const reviews = [
 export default function Banner() {
 	return (
 		<div className="bg-secondary">
-			<div className="flex container lg:flex-row flex-col py-28">
+			<div className="flex container lg:flex-row flex-col pt-28 pb-10">
 				<div className="w-8/12">
 					<h1 className="leading-14 pb-4">
 						Welcome. I am Ollie Pangan. This is where bold strategy
