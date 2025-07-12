@@ -1,3 +1,6 @@
+"use client";
+import { usePathname } from "next/navigation";
+
 const cards = [
 	{
 		title: "Total Value Delivered",
@@ -50,23 +53,37 @@ const cards = [
 ];
 
 export default function PortfolioCards() {
+	const pathName = usePathname();
 	return (
-		<div className="mt-10 py-7 px-5 border border-low/10 rounded-2xl grid grid-cols-4 gap-4">
-			{cards.map((card, idx) => (
-				<div
-					key={idx}
-					className="py-4 px-6 text-left rounded-xl"
-					style={{ background: card.bgColor }}
-				>
-					<h4>{card.title}</h4>
-					<h4
-						className="text-2xl font-bold pt-2"
-						style={{ color: card.textColor }}
+		<div className="lg:mt-10 mt-5 lg:py-7 md:py-4 py-3 lg:px-5 md:px-4 px-3 border border-low/10 rounded-2xl">
+			<h4
+				className={` lg:text-2xl pb-4 font-bold ${
+					pathName === "/" ? "hidden" : "block"
+				}`}
+			>
+				Leadership by the Numbers
+			</h4>
+			<div
+				className={`grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 lg:gap-4 ${
+					pathName === "/" ? " lg:grid-cols-4 " : "2xl:grid-cols-8"
+				}`}
+			>
+				{cards.map((card, idx) => (
+					<div
+						key={idx}
+						className="lg:py-4 py-2 lg:px-6 px-3 flex flex-col justify-between text-left rounded-xl"
+						style={{ background: card.bgColor }}
 					>
-						{card.value}
-					</h4>
-				</div>
-			))}
+						<h4 className="text-sm">{card.title}</h4>
+						<h4
+							className="text-xl font-bold pt-2"
+							style={{ color: card.textColor }}
+						>
+							{card.value}
+						</h4>
+					</div>
+				))}
+			</div>
 		</div>
 	);
 }

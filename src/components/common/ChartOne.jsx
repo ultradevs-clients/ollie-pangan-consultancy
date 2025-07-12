@@ -42,13 +42,13 @@ const chartData = [
 
 export default function PortfolioImpactChart() {
 	return (
-		<div className="border border-low/10 p-5 rounded-2xl text-left w-full">
+		<div className="border border-low/10 p-3 lg:p-5 rounded-2xl text-left w-full  overflow-x-auto">
 			<h4 className="text-xl font-bold">Portfolio Impact Breakdown</h4>
 			<h5 className="text-low pt-3">
 				Selected highlights from my $18M+ portfolio. Each project
 				delivered measurable business value.
 			</h5>
-			<div className="w-full h-[250px]">
+			<div className="min-w-[600px] lg:w-full h-[250px]">
 				<ResponsiveContainer width="100%" height="100%">
 					<BarChart
 						data={chartData}

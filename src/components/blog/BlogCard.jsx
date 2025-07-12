@@ -7,7 +7,7 @@ export default function BlogCard({ id, title, description, date, image }) {
 	return (
 		<Link
 			href={`/blog/${id}`}
-			className="p-2 border border-low/10 hover:shadow-md duration-300 rounded-2xl cursor-pointer"
+			className="p-2 border border-low/10 hover:shadow-md duration-300 rounded-3xl cursor-pointer"
 		>
 			<Image
 				src={image ? image : "https://i.ibb.co/fVrSSKFP/fff.webp"}
@@ -15,7 +15,7 @@ export default function BlogCard({ id, title, description, date, image }) {
 				width={1920}
 				height={1080}
 				quality={100}
-				className="w-full h-64 object-cover rounded-lg"
+				className="w-full lg:h-44 xl:h-64 object-cover rounded-2xl"
 			/>
 			<div className="p-3 text-left flex flex-col justify-between h-[calc(100%-256px)]">
 				<div>

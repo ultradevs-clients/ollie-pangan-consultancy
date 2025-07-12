@@ -22,9 +22,9 @@ const reviews = [
 export default function Banner() {
 	return (
 		<div className="bg-secondary">
-			<div className="flex container lg:flex-row flex-col pt-28 pb-10">
-				<div className="w-8/12">
-					<h1 className="leading-14 pb-4">
+			<div className="flex container lg:flex-row flex-col-reverse gap-4 lg:gap-0 lg:px-0 px-5 lg:pt-28 lg:pb-10">
+				<div className="lg:w-8/12">
+					<h1 className="lg:leading-14 pb-4">
 						Welcome. I am Ollie Pangan. This is where bold strategy
 						meets smart execution.
 					</h1>
@@ -34,7 +34,7 @@ export default function Banner() {
 					</p>
 					<Link
 						href={"/contact"}
-						className="text-xl text-low w-max underline pb-5 flex cursor-pointer  items-center gap-2"
+						className="text-xl text-low w-full underline pb-5 flex cursor-pointer  items-center gap-2"
 					>
 						Let’s build smarter, faster, better business—together
 						<BsArrowRight className="text-2xl mt-2" />
@@ -69,7 +69,7 @@ export default function Banner() {
 						</Marquee>
 					</div>
 				</div>
-				<div className="w-4/12">
+				<div className="w-full lg:w-4/12">
 					<BannerCarousel />
 				</div>
 			</div>

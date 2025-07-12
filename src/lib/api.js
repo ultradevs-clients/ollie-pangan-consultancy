@@ -25,7 +25,8 @@ export const fetchBlogs = async (page = 1, pageSize = 9) => {
       ? `http://localhost:1337${item.image.url}`
       : "",
   }));
-
+  
+  localStorage.setItem("blogs", JSON.stringify(blogs))
   return {
     blogs,
     pagination: res.data.meta.pagination,

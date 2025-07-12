@@ -1,5 +1,5 @@
 .div-shaped {
-	@apply mask-[url('/Rectangle.svg')] mask-no-repeat w-full h-full cursor-pointer rounded-4xl bg-low/10;
+	@apply mask-[url('/Rectangle.svg')] mask-no-repeat w-full mask-cover overflow-hidden h-full cursor-pointer rounded-4xl bg-low/10;
 }
 
 .content {

@@ -34,7 +34,7 @@ export default function BannerCarousel() {
 		<div className="relative w-full ">
 			<div
 				ref={sliderRef}
-				className="keen-slider rounded-2xl  h-[600px] overflow-hidden"
+				className="keen-slider rounded-2xl h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden"
 			>
 				{slides.map((video, idx) => (
 					<div

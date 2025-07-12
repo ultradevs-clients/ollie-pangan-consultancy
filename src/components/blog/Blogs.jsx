@@ -13,6 +13,8 @@ import {
 	PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useBlogContext } from "@/app/context/BlogContext";
+import Lottie from "lottie-react";
+import animationData from "@/assets/lotties/not-found.json";
 
 export default function Blogs() {
 	const { blogs, setBlogs } = useBlogContext();
@@ -26,7 +28,6 @@ export default function Blogs() {
 			setIsLoading(true);
 			const { blogs, pagination } = await fetchBlogs(page, 9);
 			setBlogs(blogs);
-
 			setPagination(pagination);
 			setIsLoading(false);
 		};
@@ -73,30 +74,41 @@ export default function Blogs() {
 			</p>
 
 			<section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6">
-				{isLoading
-					? [...Array(9)].map((_, index) => (
-							<div
-								key={index}
-								className="p-2 border border-low/20 hover:shadow-md duration-300 rounded-2xl"
-							>
-								<Skeleton className="h-64 w-full rounded-xl bg-accent/20" />
-								<div className="p-3 text-left flex flex-col justify-between h-[calc(100%-256px)]">
-									<Skeleton className="h-4 mb-5 w-full rounded-xl bg-accent/20" />
-									<Skeleton className="h-4 mb-4 w-full rounded-xl bg-accent/20" />
-									<Skeleton className="h-4 w-2/4 rounded-xl bg-accent/20" />
-								</div>
+				{isLoading ? (
+					[...Array(9)].map((_, index) => (
+						<div
+							key={index}
+							className="p-2 border border-low/20 hover:shadow-md duration-300 rounded-2xl"
+						>
+							<Skeleton className="h-64 w-full rounded-xl bg-accent/20" />
+							<div className="p-3 text-left flex flex-col justify-between h-[calc(100%-256px)]">
+								<Skeleton className="h-4 mb-5 w-full rounded-xl bg-accent/20" />
+								<Skeleton className="h-4 mb-4 w-full rounded-xl bg-accent/20" />
+								<Skeleton className="h-4 w-2/4 rounded-xl bg-accent/20" />
 							</div>
-					  ))
-					: blogs.map((item) => (
-							<BlogCard
-								key={item.id}
-								id={item.id}
-								title={item.title}
-								description={item.description}
-								date={item.date}
-								image={item.image}
-							/>
-					  ))}
+						</div>
+					))
+				) : blogs.length < 1 ? (
+					<div className="h-96 lg:col-span-3 md:col-span-2 flex items-center flex-col justify-center">
+						<div className="w-64 h-64">
+							<Lottie animationData={animationData} loop={true} />
+						</div>
+						<h4 className="text-xl text-low/80 font-semibold">
+							Blog not found
+						</h4>
+					</div>
+				) : (
+					blogs.map((item) => (
+						<BlogCard
+							key={item.id}
+							id={item.id}
+							title={item.title}
+							description={item.description}
+							date={item.date}
+							image={item.image}
+						/>
+					))
+				)}
 			</section>
 
 			{/* Pagination Controls */}

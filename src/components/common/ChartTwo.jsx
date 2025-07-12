@@ -18,16 +18,16 @@ const data = [
 
 export default function ChartTwo() {
 	return (
-		<div className="border border-low/10 p-5 rounded-2xl text-left w-full">
+		<div className="border border-low/10 p-5 rounded-2xl text-left w-full overflow-x-auto">
 			<h4 className="text-xl font-bold">
 				Enterprise Transformations: Adoption & Impact by Category
 			</h4>
-			<div className="w-full h-[320px]">
+			<div className="min-w-[400px] xl:w-full h-[320px]">
 				<ResponsiveContainer width="100%" height="100%">
 					<BarChart
 						data={data}
 						layout="vertical"
-						margin={{ top: 30, right: 50, left: 0, bottom: -20 }}
+						margin={{ top: 30, right: 60, left: -30, bottom: -20 }}
 					>
 						<XAxis
 							axisLine={true}
