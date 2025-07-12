@@ -4,6 +4,11 @@ import Link from "next/link";
 import React from "react";
 
 export default function BlogCard({ id, title, description, date, image }) {
+	// const cleanImageUrl = (url) => {
+	// 	const match = url.match(/https:\/\/[^"]+/g);
+	// 	return match?.[1] || match?.[0] || ""; // return the second one if found
+	// };
+
 	return (
 		<Link
 			href={`/blog/${id}`}

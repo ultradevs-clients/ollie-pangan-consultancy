@@ -1,8 +1,13 @@
 
 import axios from "axios";
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+
+const formatImageUrl = (url) =>
+  url?.startsWith("http") ? url : `${BASE_URL}${url}`;
+
 export const fetchBlogs = async (page = 1, pageSize = 9) => {
-  const res = await axios.get(`http://localhost:1337/api/blogs`, {
+  const res = await axios.get(`${BASE_URL}/api/blogs`, {
     params: {
       populate: "image",
       pagination: {
@@ -21,9 +26,7 @@ export const fetchBlogs = async (page = 1, pageSize = 9) => {
         ).join("\n")
       : item.description || "",
     date: item.date || item.createdAt || "",
-     image: item.image?.url
-      ? `http://localhost:1337${item.image.url}`
-      : "",
+	image: formatImageUrl(item.image.url),
   }));
   
   localStorage.setItem("blogs", JSON.stringify(blogs))
@@ -32,3 +35,5 @@ export const fetchBlogs = async (page = 1, pageSize = 9) => {
     pagination: res.data.meta.pagination,
   };
 };
+
+
