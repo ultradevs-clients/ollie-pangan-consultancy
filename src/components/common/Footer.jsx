@@ -10,8 +10,11 @@ import { FiPhoneCall } from "react-icons/fi";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+	const pathName = usePathname();
+
 	const {
 		register,
 		handleSubmit,
@@ -22,8 +25,15 @@ export default function Footer() {
 	const onSubmit = (data) => {
 		console.log("Form submitted:", data);
 	};
+
 	return (
-		<div className="bg-footer pt-12 lg:pt-20 footer lg:px-0 px-5">
+		<div
+			className={`${
+				pathName === "/portfolio"
+					? "hidden"
+					: "bg-footer pt-12 lg:pt-20 footer lg:px-0 px-5"
+			}`}
+		>
 			<div className="container flex lg:flex-row flex-col lg:gap-0 gap-10 text-background/70 pb-8 lg:pb-14">
 				<div className="lg:w-2/4">
 					<Image

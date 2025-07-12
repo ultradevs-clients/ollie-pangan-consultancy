@@ -1,6 +1,6 @@
-import Services from "@/components/about/Services";
 import ContactForm from "@/components/common/ContactForm";
 import PageBanner from "@/components/common/PageBanner";
+import Services from "@/components/common/Services";
 import React from "react";
 
 export const metadata = {

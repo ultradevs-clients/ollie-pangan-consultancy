@@ -1,0 +1,7 @@
+.div-shaped {
+	@apply mask-[url('/Rectangle.svg')] mask-no-repeat w-full mask-cover overflow-hidden h-full cursor-pointer rounded-4xl bg-low/10;
+}
+
+.content {
+	@apply w-full  aspect-video p-0 bg-low/10 border-low/70 rounded-2xl overflow-hidden;
+}
