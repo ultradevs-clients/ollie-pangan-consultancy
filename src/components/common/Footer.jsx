@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { Input } from "../ui/input";
 import { usePathname } from "next/navigation";
+import { getYear } from "date-fns";
 
 export default function Footer() {
 	const pathName = usePathname();
@@ -152,7 +153,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<div className="container text-sm lg:text-base flex lg:flex-row flex-col items-center justify-between text-background/70 border-t border-background/15 pt-3 lg:pt-6 pb-4 lg:pb-8">
-				<h5>Copyright 2024 © Ollie Pangan</h5>
+				<h5>Copyright {new Date().getFullYear()} © Ollie Pangan</h5>
 				<div className="flex gap-2">
 					<a href="#">Terms & Condition</a>
 					<span>|</span>
