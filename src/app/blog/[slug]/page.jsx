@@ -8,6 +8,8 @@ import Image from "next/image";
 import { format } from "date-fns";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
+import axios from "axios";
+import { fetchBlogById } from "@/lib/api";
 
 export default function page() {
 	const { slug } = useParams();
@@ -15,13 +17,13 @@ export default function page() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
+		if (!slug) return;
+
 		setLoading(true);
-		const storedBlogs = JSON.parse(localStorage.getItem("blogs" || "[]"));
-		const found = storedBlogs?.find(
-			(item) => String(item.id) === String(slug)
-		);
-		setBlog(found);
-		setLoading(false);
+		fetchBlogById(slug).then((data) => {
+			setBlog(data);
+			setLoading(false);
+		});
 	}, [slug]);
 
 	if (!blog) {
@@ -57,7 +59,7 @@ export default function page() {
 					<div className="container flex lg:flex-row flex-col lg:px-0 px-5 gap-6 lg:gap-6 xl:gap-20 pt-2 lg:pt-16 pb-12">
 						<Image
 							src={blog?.image}
-							alt="Blog Image"
+							alt={blog?.title}
 							width={1920}
 							height={1080}
 							quality={100}
