@@ -17,7 +17,7 @@ export default function Services() {
 						To help people and companies see what's possible-even
 						when they can't see it yet.
 					</p>
-					<div className="bg-main/10 relative rounded-3xl mt-5 lg:mt-8 overflow-hidden">
+					<div className="bg-main/10 relative rounded-3xl mt-5 lg:mt-8 overflow-hidden xl:w-8/12">
 						<div className="p-5 lg:p-8">
 							<h4 className="text-xl lg:text-2xl font-semibold">
 								What I’m Here For?
@@ -30,20 +30,16 @@ export default function Services() {
 						<Image
 							src={UserImage}
 							alt="User Image"
-							className="w-44 lg:w-96"
+							className="w-72 lg:w-96"
 						/>
 
-						<div className="absolute right-3 bottom-3">
-							<div className="rounded-t-2xl  px-5 2xl:px-7 pt-3 2xl:pt-6 pb-1 2xl:pb-2 bg-background w-max relative card">
-								<h4 className="2xl:text-xl lg:text-base text-sm font-medium">
-									Experience
-								</h4>
-							</div>
-							<div className="rounded-b-2xl rounded-tr-2xl pr-7 pl-5 2xl:px-7 pt-1 xl:pt-2 pb-3 xl:pb-4 2xl:pb-6 bg-background ">
-								<h4 className="text-xl lg:text-3xl 2xl:text-[44px] font-extrabold">
-									20+ Years
-								</h4>
-							</div>
+						<div class="w-60 h-40 2xl:scale-100 lg:scale-90 md:scale-[70%] scale-[65%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-3 2xl:right-3 xl:-bottom-2 lg:-bottom-2 lg:right-0 md:-bottom-6 md:-right-7 -bottom-8 -right-8 mask-line">
+							<h4 className="text-xl font-medium absolute top-8 left-8 ">
+								Experience
+							</h4>
+							<h4 className="text-4xl font-bold absolute bottom-10 left-8 ">
+								20+ Years
+							</h4>
 						</div>
 					</div>
 				</div>

@@ -34,7 +34,7 @@ export default function Banner() {
 					</p>
 					<Link
 						href={"/contact"}
-						className="text-xl text-low w-full underline pb-5 flex cursor-pointer  items-center gap-2"
+						className="text-xl text-low w-full lg:w-max underline pb-5 flex cursor-pointer  items-center gap-2"
 					>
 						Let’s build smarter, faster, better business—together
 						<BsArrowRight className="text-2xl mt-2" />
