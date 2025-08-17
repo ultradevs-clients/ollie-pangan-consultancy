@@ -30,14 +30,14 @@ export default function Services() {
 						<Image
 							src={UserImage}
 							alt="User Image"
-							className="w-72 lg:w-96"
+							className="w-96"
 						/>
 
-						<div class="w-60 h-40 2xl:scale-100 lg:scale-90 md:scale-[70%] scale-[65%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-3 2xl:right-3 xl:-bottom-2 lg:-bottom-2 lg:right-0 md:-bottom-6 md:-right-7 -bottom-8 -right-8 mask-line">
-							<h4 className="text-xl font-medium absolute top-8 left-8 ">
+						<div class="w-[280px] h-[146px] 2xl:scale-100 lg:scale-90 md:scale-[70%] scale-[75%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-5 2xl:right-0 xl:-bottom-2 lg:-bottom-0 lg:-right-4 md:-bottom-5 md:-right-12 -bottom-3 -right-10 mask-line">
+							<h4 className="text-[22px] font-medium absolute top-6 left-10">
 								Experience
 							</h4>
-							<h4 className="text-4xl font-bold absolute bottom-10 left-8 ">
+							<h4 className="text-[44px] font-bold absolute bottom-6 left-9">
 								20+ Years
 							</h4>
 						</div>
