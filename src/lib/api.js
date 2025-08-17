@@ -1,7 +1,7 @@
 
 import axios from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL ? process.env.NEXT_PUBLIC_API_URL : "https://nice-idea-4c38d981a8.strapiapp.com";
 
 const formatImageUrl = (url) =>
   url?.startsWith("http") ? url : `${BASE_URL}${url}`;
