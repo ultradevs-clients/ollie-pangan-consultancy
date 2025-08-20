@@ -29,6 +29,10 @@ p {
 	@apply w-full md:w-[95%] lg:w-[90%] mx-auto;
 }
 
+.portfolio-container {
+	@apply w-full md:w-[95%]  mx-auto;
+}
+
 .btn {
 	@apply bg-main text-background px-6 py-3 rounded-xl cursor-pointer w-full lg:w-max;
 }

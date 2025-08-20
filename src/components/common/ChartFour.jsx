@@ -42,7 +42,7 @@ export default function ChartFour() {
 
 			<ul className="w-max lg:w-full">
 				<div className="text-sm font-semibold flex  w-full bg-low/10 py-3 px-4 rounded-xl">
-					<div className="w-2/4 flex gap-6">
+					<div className="w-2/4 flex gap-10">
 						<h4 className="w-1/6">Country</h4>
 						<h4 className="w-5/6">Industries</h4>
 					</div>
@@ -56,9 +56,9 @@ export default function ChartFour() {
 						key={idx}
 						className="border-b px-4 py-2 border-low/10 flex text-sm"
 					>
-						<div className="w-2/4 flex items-center gap-8">
+						<div className="w-2/4 flex items-center gap-10">
 							<h4 className="w-1/6">{item.country}</h4>
-							<h4 className="w-5/6 flex truncate">
+							<h4 className="w-5/6">
 								{item.industries.join(", ")}
 							</h4>
 						</div>
