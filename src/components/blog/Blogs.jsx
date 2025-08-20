@@ -101,7 +101,7 @@ export default function Blogs() {
 					blogs.map((item) => (
 						<BlogCard
 							key={item.id}
-							id={item.id}
+							id={item.documentId}
 							title={item.title}
 							description={item.description}
 							date={item.date}

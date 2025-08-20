@@ -17,7 +17,7 @@ export default function Services() {
 						To help people and companies see what's possible-even
 						when they can't see it yet.
 					</p>
-					<div className="bg-main/10 relative rounded-3xl mt-5 lg:mt-8 overflow-hidden">
+					<div className="bg-main/10 relative rounded-3xl mt-5 lg:mt-8 overflow-hidden ">
 						<div className="p-5 lg:p-8">
 							<h4 className="text-xl lg:text-2xl font-semibold">
 								What I’m Here For?
@@ -30,20 +30,16 @@ export default function Services() {
 						<Image
 							src={UserImage}
 							alt="User Image"
-							className="w-44 lg:w-96"
+							className="w-[400px]"
 						/>
 
-						<div className="absolute bottom-3 lg:bottom-12 right-3 lg:right-8 z-10">
-							<div className="rounded-t-2xl  px-5 lg:px-7 pt-3 lg:pt-6 pb-1 lg:pb-2 bg-background w-max relative card">
-								<h4 className="lg:text-xl text-sm font-medium">
-									Experience
-								</h4>
-							</div>
-							<div className="rounded-b-2xl rounded-tr-2xl pr-7 pl-5 lg:px-7 pt-1 lg:pt-2 pb-3 lg:pb-6 bg-background ">
-								<h4 className="text-xl lg:text-[44px] font-extrabold">
-									20+ Years
-								</h4>
-							</div>
+						<div className="md:w-[300px] md:h-[150px] w-[280px] h-[140px] xl:scale-100 lg:scale-90 md:scale-[70%] scale-[70%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-5 2xl:right-0 xl:bottom-4 xl:right-1 lg:-bottom-0 lg:-right-4 md:-bottom-5 md:-right-12 -bottom-3 -right-11 mask-line">
+							<h4 className="text-[22px] font-medium absolute md:top-6 md:left-13 left-10 top-5">
+								Experience
+							</h4>
+							<h4 className="text-[44px] font-bold absolute md:bottom-6 md:left-13 left-9 bottom-5">
+								20+ Years
+							</h4>
 						</div>
 					</div>
 				</div>
@@ -91,46 +87,55 @@ const accordionData = [
 	{
 		value: "item-2",
 		title: "2. Transformation Is My Playground",
-		content: "",
+		content:
+			"I thrive in chaos. Whether it's broken processes or scattered data, I know how to clean it up, stich it together, and turn it into profit",
 	},
 	{
 		value: "item-3",
 		title: "3. I Don't Believe in Corporate Theater",
-		content: "",
+		content:
+			"No buzzwords. No performative decks. I fix systems, deliver results, and leave the theater to the actors.",
 	},
 	{
 		value: "item-4",
 		title: "4. I'm a Cancer Survivor",
-		content: "",
+		content:
+			"I rewrote the ending. I don't waste time, energy, or second chances.",
 	},
 	{
 		value: "item-5",
 		title: "5. I've Run 13 Marathons (Almost All the Majors)",
-		content: "",
+		content:
+			"Because mental toughness doesn't live in slides. It lives in grit, endurance, and the discipline to show up -even when it hurts.",
 	},
 	{
 		value: "item-6",
 		title: "6. I Used to Run a Purposeful Kitchen",
-		content: "",
+		content:
+			"Food-ollie-gy wasn't just about great meals -donated 70% of profits to causes that mattered. Even when I had little, I gave big",
 	},
 	{
 		value: "item-7",
 		title: "7. I've Built My Own Practice",
-		content: "",
+		content:
+			"I've pitched, failed, pivoted, and built again. My consultancy taught me more than any MBA ever could.",
 	},
 	{
 		value: "item-8",
-		title: "8. I Show Up With People, Not Just",
-		content: "",
+		title: "8. I Show Up With People, Not Just Projects",
+		content:
+			"My teams stay loyal-not because I'm perfect, but because I lead with empathy, clarity, and follow-through.",
 	},
 	{
 		value: "item-9",
 		title: "9. I Speak Business and Tech — Fluently",
-		content: "",
+		content:
+			"I move between C-suite boardrooms and data engineering sprints like I belong in both -because I do.",
 	},
 	{
 		value: "item-10",
 		title: "10. I'm Building a Legacy That Outlives Me",
-		content: "",
+		content:
+			"I'm not here for titles. I'm here to leave something behind that lifts others long after I'm gone.",
 	},
 ];
