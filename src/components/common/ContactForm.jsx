@@ -14,9 +14,30 @@ export default function ContactForm() {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data) => {
-		console.log("Form submitted:", data);
+	const onSubmit = async (data) => {
+		try {
+			const res = await fetch("https://olliepangan.com/mailer.php", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			const result = await res.json();
+
+			if (result.success) {
+				alert("✅ Message sent successfully!");
+				reset();
+			} else {
+				alert("❌ " + result.message);
+			}
+		} catch (error) {
+			alert("❌ Error sending message. Try again later.");
+			console.error(error);
+		}
 	};
+
 	return (
 		<div className="container py-12 lg:py-20 flex lg:flex-row flex-col gap-6 lg:gap-0 items-center lg:px-0 px-5">
 			<div className="lg:w-2/4">
