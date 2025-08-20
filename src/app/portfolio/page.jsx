@@ -10,7 +10,7 @@ export const metadata = {
 export default function page() {
 	return (
 		<>
-			<div className="container lg:px-0 px-5 pb-6">
+			<div className="portfolio-container lg:px-0 px-5 pb-6">
 				<Header />
 				<PortfolioCards />
 				<PortfolioCharts />

@@ -26,7 +26,11 @@ p {
 
 .container {
 	/* @apply md:w-11/12 xl:w-8/12 mx-auto; */
-	@apply w-full md:w-[95%] lg:w-[90%] mx-auto;
+	@apply w-full md:w-[95%] lg:w-[90%] 2xl:w-[70%] mx-auto;
+}
+
+.portfolio-container {
+	@apply w-full md:w-[95%]  mx-auto;
 }
 
 .btn {

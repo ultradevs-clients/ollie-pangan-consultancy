@@ -25,7 +25,7 @@ export default function Cards() {
 					className="w-20 mx-auto -mt-16"
 				/>
 				<h5 className="text-2xl font-bold text-main pt-4 pb-2">Call</h5>
-				<h6 className="font-medium">(+21) 547 885 6885</h6>
+				<h6 className="font-medium">+639171238553</h6>
 				<button
 					onClick={handleCall}
 					className="btn w-full mt-5 border !bg-background !text-accent hover:!bg-main hover:!text-background duration-200"
@@ -42,7 +42,7 @@ export default function Cards() {
 				<h5 className="text-2xl font-bold text-main pt-4 pb-2">
 					Email
 				</h5>
-				<h6 className="font-medium">ollie@example.com</h6>
+				<h6 className="font-medium">hello@olliepangan.com</h6>
 				<button
 					onClick={handleMail}
 					className="btn w-full mt-5  border !bg-background !text-accent hover:!bg-main hover:!text-background duration-200"
@@ -59,7 +59,7 @@ export default function Cards() {
 				<h5 className="text-2xl font-bold text-main pt-4 pb-2">
 					Address
 				</h5>
-				<h6 className="font-medium">Bowery St, New York, USA</h6>
+				<h6 className="font-medium">Manila, Philippines</h6>
 				<button
 					onClick={handleLocation}
 					className="btn w-full mt-5  border !bg-background !text-accent hover:!bg-main hover:!text-background duration-200"

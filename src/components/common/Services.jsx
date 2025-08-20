@@ -33,14 +33,14 @@ export default function Services() {
 							className="w-[400px]"
 						/>
 
-						<div className="md:w-[300px] md:h-[150px] w-[280px] h-[140px] xl:scale-100 lg:scale-90 md:scale-[70%] scale-[70%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-5 2xl:right-0 xl:bottom-4 xl:right-1 lg:-bottom-0 lg:-right-4 md:-bottom-5 md:-right-12 -bottom-3 -right-11 mask-line">
+						{/* <div className="md:w-[300px] md:h-[150px] w-[280px] h-[140px] xl:scale-100 lg:scale-90 md:scale-[70%] scale-[70%] bg-background/50 backdrop-blur-md  absolute 2xl:bottom-5 2xl:right-0 xl:bottom-4 xl:right-1 lg:-bottom-0 lg:-right-4 md:-bottom-5 md:-right-12 -bottom-3 -right-11 mask-line">
 							<h4 className="text-[22px] font-medium absolute md:top-6 md:left-13 left-10 top-5">
 								Experience
 							</h4>
 							<h4 className="text-[44px] font-bold absolute md:bottom-6 md:left-13 left-9 bottom-5">
 								20+ Years
 							</h4>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<div className="md:w-2/4">

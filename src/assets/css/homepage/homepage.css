@@ -1,4 +1,4 @@
-.div-shaped {
+/* .div-shaped {
 	@apply mask-[url('/Rectangle.svg')] mask-no-repeat w-full mask-cover overflow-hidden h-full cursor-pointer rounded-4xl bg-low/10;
 }
 .mask-line {
@@ -11,8 +11,34 @@
 	mask-repeat: no-repeat;
 	mask-position: center;
 	mask-size: cover;
-}
+} */
 
 .content {
 	@apply w-full  aspect-video p-0 bg-low/10 border-low/70 rounded-2xl overflow-hidden;
+}
+
+.shape-div {
+	position: relative;
+	height: 650px;
+	width: 100%;
+	padding-top: 150px;
+	padding-left: 100px;
+
+	/* Use your SVG mask */
+	-webkit-mask-image: url("/Rectangle.svg");
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	-webkit-mask-position: center;
+
+	mask-image: url("/Rectangle.svg");
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	mask-position: center;
+
+	background: #d1d1d1;
+	border-radius: 12px;
+
+	.user-Image {
+		transform: scaleX(-1) scale(1.5);
+	}
 }
