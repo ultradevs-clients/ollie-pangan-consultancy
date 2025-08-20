@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { FiMail } from "react-icons/fi";
 import { FiPhoneCall } from "react-icons/fi";
 import { Input } from "../ui/input";
@@ -14,8 +14,32 @@ export default function ContactForm() {
 		formState: { errors },
 	} = useForm();
 
-	const onSubmit = (data) => {
-		console.log("Form submitted:", data);
+	const [result, setResult] = useState("Send Message");
+
+	const onSubmit = async (formData) => {
+		setResult("Sending...");
+		const form = new FormData();
+		for (const key in formData) {
+			form.append(key, formData[key]);
+		}
+
+		form.append("access_key", "df7fa67d-81a9-4cec-b85c-c3263e55eaad");
+
+		const response = await fetch("https://api.web3forms.com/submit", {
+			method: "POST",
+			body: form,
+		});
+
+		const data = await response.json();
+
+		if (data.success) {
+			setResult("Message sent!");
+			reset();
+			setTimeout(() => setResult("Send Message"), 5000);
+		} else {
+			setResult(data.message || "Something went wrong");
+			setTimeout(() => setResult("Send Message"), 5000);
+		}
 	};
 	return (
 		<div className="container py-12 lg:py-20 flex lg:flex-row flex-col gap-6 lg:gap-0 items-center lg:px-0 px-5">
@@ -31,13 +55,13 @@ export default function ContactForm() {
 						<div className="bg-main/10 p-2 rounded-lg">
 							<FiMail />
 						</div>
-						ollie@example.com
+						hello@olliepangan.com
 					</li>
 					<li className="flex items-center gap-2 text-lg">
 						<div className="bg-main/10 p-2 rounded-lg">
 							<FiPhoneCall />
 						</div>
-						Support: (+21) 547 885 6885
+						Support: +639171238553
 					</li>
 				</ul>
 			</div>
@@ -117,8 +141,8 @@ export default function ContactForm() {
 							</p>
 						)}
 					</div>
-					<div className="lg:pt-2 col-span-2 md:col-span-1">
-						<button className="btn">Send Message</button>
+					<div className="lg:pt-2 col-span-2 md:col-span-1 flex items-center gap-4">
+						<button className="btn">{result}</button>
 					</div>
 				</form>
 			</div>

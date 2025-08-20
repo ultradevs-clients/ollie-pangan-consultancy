@@ -19,10 +19,6 @@
 
 .shape-div {
 	position: relative;
-	height: 650px;
-	width: 100%;
-	padding-top: 150px;
-	padding-left: 100px;
 
 	/* Use your SVG mask */
 	-webkit-mask-image: url("/Rectangle.svg");
@@ -32,13 +28,13 @@
 
 	mask-image: url("/Rectangle.svg");
 	mask-repeat: no-repeat;
-	mask-size: cover;
+	mask-size: contain;
 	mask-position: center;
 
 	background: #d1d1d1;
 	border-radius: 12px;
 
 	.user-Image {
-		transform: scaleX(-1) scale(1.5);
+		transform: scaleX(-1);
 	}
 }
