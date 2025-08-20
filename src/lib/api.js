@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL
+	? process.env.NEXT_PUBLIC_API_URL
+	: "https://tranquil-horse-47bc1c95bb.strapiapp.com";
 
 const formatImageUrl = (url) =>
 	url?.startsWith("http") ? url : `${BASE_URL}${url}`;
@@ -26,7 +28,7 @@ export const fetchBlogs = async (page = 1, pageSize = 9) => {
 					.join("\n")
 			: item.description || "",
 		date: item.date || item.createdAt || "",
-		image: formatImageUrl(item.image.url),
+		image: item?.image?.url.length && formatImageUrl(item.image.url),
 	}));
 
 	return {

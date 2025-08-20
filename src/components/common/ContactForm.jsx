@@ -55,13 +55,15 @@ export default function ContactForm() {
 						<div className="bg-main/10 p-2 rounded-lg">
 							<FiMail />
 						</div>
-						hello@olliepangan.com
+						<a href="mailto:hello@olliepangan.com">
+							hello@olliepangan.com
+						</a>
 					</li>
 					<li className="flex items-center gap-2 text-lg">
 						<div className="bg-main/10 p-2 rounded-lg">
 							<FiPhoneCall />
 						</div>
-						Support: +639171238553
+						<a href="tel:+639171238553">Support: +639171238553</a>
 					</li>
 				</ul>
 			</div>

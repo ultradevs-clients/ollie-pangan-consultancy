@@ -117,13 +117,17 @@ export default function Footer() {
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiMail />
 							</div>
-							hello@olliepangan.com
+							<a href="mailto:hello@olliepangan.com">
+								hello@olliepangan.com
+							</a>
 						</li>
 						<li className="flex items-center gap-2 lg:text-lg">
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiPhoneCall />
 							</div>
-							Support: +639171238553
+							<a href="tel:+639171238553">
+								Support: +639171238553
+							</a>
 						</li>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="flex items-center mt-5 lg:mt-7 lg:pr-[3px] border border-background/20 bg-background/10 rounded-2xl justify-between">
