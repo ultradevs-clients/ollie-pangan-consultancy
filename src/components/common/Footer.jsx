@@ -50,38 +50,22 @@ export default function Footer() {
 					</h5>
 					<ul className="flex items-center gap-3 pt-3">
 						<li>
-							<a
-								href="https://imranx.netlify.app/"
-								target="_blank"
-								className="text-xl"
-							>
+							<a href="#" target="_blank" className="text-xl">
 								<FaFacebook />
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://imranx.netlify.app/"
-								target="_blank"
-								className="text-xl"
-							>
+							<a href="#" target="_blank" className="text-xl">
 								<FaXTwitter />
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://imranx.netlify.app/"
-								target="_blank"
-								className="text-xl"
-							>
+							<a href="#" target="_blank" className="text-xl">
 								<FaInstagram />
 							</a>
 						</li>
 						<li>
-							<a
-								href="https://imranx.netlify.app/"
-								target="_blank"
-								className="text-xl"
-							>
+							<a href="#" target="_blank" className="text-xl">
 								<FaLinkedin />
 							</a>
 						</li>
