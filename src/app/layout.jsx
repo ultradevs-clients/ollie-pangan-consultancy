@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 			<body className={`max-w-[1920px] mx-auto ${dm_sans.className}`}>
 				<BlogProvider>
 					<Navbar />
-					<div className="h-[80px]" />
+					<div className="h-[80px] bg-secondary" />
 					{children}
 					<Footer />
 				</BlogProvider>

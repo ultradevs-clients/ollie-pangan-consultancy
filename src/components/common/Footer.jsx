@@ -50,22 +50,38 @@ export default function Footer() {
 					</h5>
 					<ul className="flex items-center gap-3 pt-3">
 						<li>
-							<a href="#" target="_blank" className="text-xl">
+							<a
+								href="https://www.facebook.com/olliep28/"
+								target="_blank"
+								className="text-xl"
+							>
 								<FaFacebook />
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank" className="text-xl">
+							<a
+								href="https://x.com/iamolliepangan"
+								target="_blank"
+								className="text-xl"
+							>
 								<FaXTwitter />
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank" className="text-xl">
+							<a
+								href="https://www.instagram.com/olliepangan/?hl=en"
+								target="_blank"
+								className="text-xl"
+							>
 								<FaInstagram />
 							</a>
 						</li>
 						<li>
-							<a href="#" target="_blank" className="text-xl">
+							<a
+								href="https://www.linkedin.com/in/olliepangan/"
+								target="_blank"
+								className="text-xl"
+							>
 								<FaLinkedin />
 							</a>
 						</li>
@@ -101,13 +117,17 @@ export default function Footer() {
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiMail />
 							</div>
-							ollie@example.com
+							<a href="mailto:hello@olliepangan.com">
+								hello@olliepangan.com
+							</a>
 						</li>
 						<li className="flex items-center gap-2 lg:text-lg">
 							<div className="bg-background/10 p-2 rounded-lg">
 								<FiPhoneCall />
 							</div>
-							Support: (+21) 547 885 6885
+							<a href="tel:+639171238553">
+								Support: +639171238553
+							</a>
 						</li>
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="flex items-center mt-5 lg:mt-7 lg:pr-[3px] border border-background/20 bg-background/10 rounded-2xl justify-between">

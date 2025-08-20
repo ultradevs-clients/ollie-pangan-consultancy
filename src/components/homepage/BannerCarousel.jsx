@@ -45,7 +45,7 @@ export default function BannerCarousel() {
 	];
 
 	return (
-		<div className="relative w-full ">
+		<div className="relative">
 			{/* <div
 				ref={sliderRef}
 				className="keen-slider rounded-2xl h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden"
@@ -65,16 +65,19 @@ export default function BannerCarousel() {
 			
 				
 			</div> */}
-			<div ref={sliderRef} className="keen-slider">
+			<div ref={sliderRef} className="keen-slider ">
 				{slides.map((image, idx) => (
-					<div key={idx} className="shape-div keen-slider__slide">
+					<div
+						key={idx}
+						className="shape-div keen-slider__slide h-[400px] md:h-[600px] lg:h-[500px] xl:h-[680px] 2xl:h-[660px] lg:pt-[150px] pt-24 md:pt-0 pl-[40px] md:pl-[100px]"
+					>
 						<Image
 							width={1000}
 							height={1000}
 							quality={100}
 							src={image.imageSrc}
 							alt="User Image"
-							className="user-Image"
+							className="user-Image scale-[1.4] md:scale-[1] lg:scale-[1.6] xl:scale-[1.43] "
 						/>
 					</div>
 				))}
