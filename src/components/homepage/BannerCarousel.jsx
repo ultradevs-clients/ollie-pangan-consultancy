@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-
+import userImage from "@/assets/images/userImage.png";
+import imageShape from "@/assets/images/bg-shape.png";
 import MaskedVideoDialog from "./MaskedVideoDialog";
+import Image from "next/image";
 export default function BannerCarousel() {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -18,21 +20,33 @@ export default function BannerCarousel() {
 		},
 	});
 
+	// const slides = [
+	// 	{
+	// 		videoSrc: "/videos/video1.mp4",
+	// 	},
+	// 	{
+	// 		videoSrc: "/videos/video2.mp4",
+	// 	},
+	// 	{
+	// 		videoSrc: "/videos/video3.mp4",
+	// 	},
+	// ];
+
 	const slides = [
 		{
-			videoSrc: "/videos/video1.mp4",
+			imageSrc: userImage,
 		},
 		{
-			videoSrc: "/videos/video2.mp4",
+			imageSrc: userImage,
 		},
 		{
-			videoSrc: "/videos/video3.mp4",
+			imageSrc: userImage,
 		},
 	];
 
 	return (
 		<div className="relative w-full ">
-			<div
+			{/* <div
 				ref={sliderRef}
 				className="keen-slider rounded-2xl h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden"
 			>
@@ -46,6 +60,22 @@ export default function BannerCarousel() {
 						}`}
 					>
 						<MaskedVideoDialog videoSrc={video.videoSrc} />
+					</div>
+				))}
+			
+				
+			</div> */}
+			<div ref={sliderRef} className="keen-slider">
+				{slides.map((image, idx) => (
+					<div key={idx} className="shape-div keen-slider__slide">
+						<Image
+							width={1000}
+							height={1000}
+							quality={100}
+							src={image.imageSrc}
+							alt="User Image"
+							className="user-Image"
+						/>
 					</div>
 				))}
 			</div>
